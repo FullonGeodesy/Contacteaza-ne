@@ -2,14 +2,14 @@
 
 $nume = $_POST['nume'];
 $email = $_POST['email'];
-$suprafata (mp) = $_POST['suprafata (mp)'];
+$adresa = $_POST['adresa'];
 $mesaj = $_POST['mesaj'];
 
 $mailheader = "From:".$nume."<".$email.">\r\n";
 
 $recipient = "fullongeodesy@gmail.com";
 
-mail($recipient, $suprafata (mp), $mesaj, $mailheader) or die("Error!");
+mail($recipient, $adresa, $mesaj, $mailheader) or die("Error!");
 
 echo'
 
