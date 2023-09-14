@@ -37,6 +37,7 @@ $(document).ready(function(){
             data: formData,
             success: function() {
                 alert('Email sent successfully!');
+                $('form')[0].reset(); // Add this line to clear the form fields
             }
         });
     });
