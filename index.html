@@ -25,6 +25,23 @@
             <input type="submit" value="Send">
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('form').on('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+        var formData = $(this).serialize(); // Get form data
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: formData,
+            success: function() {
+                alert('Email sent successfully!');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
 
